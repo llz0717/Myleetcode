@@ -1,0 +1,25 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def swapNodes(self, head: ListNode, k: int) -> ListNode:
+        left=head
+        
+        for i in range(k-1):
+            left=left.next
+        
+        leftnum=left
+        
+        
+        right=head
+        
+        while left.next:
+            left=left.next
+            right=right.next
+        
+        
+        leftnum.val,right.val=right.val,leftnum.val
+
+        return head
