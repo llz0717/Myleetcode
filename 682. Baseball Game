@@ -1,0 +1,18 @@
+class Solution:
+    def calPoints(self, ops: List[str]) -> int:
+        
+        ans=[]
+        for element in ops:
+            if element == 'C':
+                ans.pop()
+            elif element == 'D':
+                ans.append(ans[-1]*2)
+            elif element == '+':
+                ans.append(ans[-2]+ans[-1])
+            else:
+                # x = txt.lstrip("-")
+                # remove the "negative sign" if wang to judge this number or not
+                
+                ans.append(int(element))
+        
+        return (sum(ans))
