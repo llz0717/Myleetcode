@@ -1,0 +1,22 @@
+from collections import Counter
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        
+        # x=Counter(nums)
+        # return heapq.nlargest(k, x.keys(), key=x.get) 
+    
+        x=Counter(nums).most_common(k)   
+        ans=[]
+        for i in range(k):
+            ans.append(x[i][0])
+        
+        return ans
+    
+        # return the unique value of this list
+        # keys = x.keys()
+
+        
+        
+        # return the counted number of each element
+        # values = ob.values()
+        
