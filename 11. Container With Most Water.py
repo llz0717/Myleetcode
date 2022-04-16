@@ -1,9 +1,9 @@
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         
-        if len(height)<3:
-            maxwater=(min(height[0],height[1]))  * 1
-        else:
+     #   if len(height)<3:
+     #       maxwater=(min(height[0],height[1]))  * 1
+     #   else:
         
             left,right=0,len(height)-1
 
